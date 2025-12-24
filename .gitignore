@@ -1,33 +1,45 @@
-HELP.md
+# ======================
+# Java / Spring Boot
+# ======================
 target/
-.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+build/
+out/
 
-### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
-
-### IntelliJ IDEA ###
-.idea
-*.iws
+# ======================
+# IDEs
+# ======================
+.idea/
 *.iml
 *.ipr
+*.iws
 
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
-
-### VS Code ###
+# VS Code (in case someone commits crimes)
 .vscode/
+
+# ======================
+# OS noise
+# ======================
+.DS_Store
+Thumbs.db
+
+# ======================
+# Logs
+# ======================
+*.log
+
+# ======================
+# Environment / secrets
+# ======================
+.env
+application-local.yml
+application-local.properties
+
+# ======================
+# Maven
+# ======================
+.mvn/wrapper/maven-wrapper.jar
+
+# ======================
+# Spring Boot extras
+# ======================
+spring.log
