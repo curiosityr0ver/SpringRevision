@@ -13,8 +13,14 @@ public class DemoApplication {
 
 		Alien alien = context.getBean(Alien.class);
 		alien.code();
-//		alien.age = 15;
-		System.out.println(alien.age);
+//		alien.setAge(14);
+		System.out.println(alien.getAge());
+				alien.setAge(14);
+
+		System.out.println(alien.getAge());
+
+//		Alien alien2 = context.getBean(Alien.class);
+//		System.out.println(alien2.getAge());
 	}
 
 
