@@ -5,6 +5,11 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Alien {
+    int age;
+
+    public Alien() {
+        System.out.println("I am alien !");
+    }
 
     @Autowired
     Laptop lap;

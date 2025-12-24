@@ -13,7 +13,10 @@ public class DemoApplication {
 
 		Alien alien = context.getBean(Alien.class);
 		alien.code();
+//		alien.age = 15;
+		System.out.println(alien.age);
 	}
+
 
 
 
