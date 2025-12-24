@@ -3,6 +3,7 @@ package com.example.demo;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
@@ -16,21 +17,21 @@ public class Alien {
     @Value("${alien.age:18}")
     private int age;
 
-    @Autowired
     @Getter
     @Setter
-    private Laptop lap;
+    private Computer comp;
 
     @Autowired
     public Alien(
-          @Value("${alien.age:18}")  int age
+            @Value("${alien.age:18}")  int age,
+            @Qualifier("Desktop") @Autowired Computer lap
     ) {
         this.age = age;
+        this.comp = lap;
         System.out.println("I am alien !");
     }
 
     public void code() {
-        lap.compile();
-        System.out.println("Code compiled");
+        comp.compile();
     }
 }
